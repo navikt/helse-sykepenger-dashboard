@@ -44,7 +44,7 @@ jobs:
                PROD_NAISERATOR=$(docker run --volumes-from naisyamlprod mikefarah/yq yq r /nais/prod.yaml -j)
                PROD_NAISERATOR=$(echo $PROD_NAISERATOR | jq '.spec.image = "'$DOCKER_IMG_NAME':'$COMMIT_SHORT'"' -c)
                PROD_DEPLOYMENT=$(cat deploy/deployreq.json | jq '.payload.kubernetes.resources += ['$PROD_NAISERATOR']')
-               PROD_DEPLOYMENT=$(echo $PROD_DEPLOYMENT | jq '.environment = "prod-fss"')
+               PROD_DEPLOYMENT=$(echo $PROD_DEPLOYMENT | jq '.environment = "prod-sbs"')
                PROD_DEPLOYMENT=$(echo $PROD_DEPLOYMENT | jq '.ref = "'$COMMIT_SHORT'"')
                curl -i -n --fail \
                    -X POST \
