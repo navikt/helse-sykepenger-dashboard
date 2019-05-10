@@ -20,4 +20,5 @@ spec:
   ingresses:
     - "https://sykepenger-dashboard.nais.oera.no"
     - "https://sykepenger-dashboard.prod-sbs.nais.io"
+    - "https://tjenester.nav.no/sykepenger-dashboard"
 
