@@ -19,4 +19,5 @@ spec:
     max: 1
   ingresses:
     - "https://sykepenger-dashboard.nais.oera.no"
+    - "https://sykepenger-dashboard.prod-sbs.nais.io"
 
