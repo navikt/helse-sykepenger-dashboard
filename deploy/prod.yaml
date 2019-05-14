@@ -9,10 +9,10 @@ spec:
   image: is_set_from_pipeline
   port: 8080
   liveness:
-    path: /
+    path: sykepenger-dashboard/
     initialDelay: 1
   readiness:
-    path: /
+    path: sykepenger-dashboard/
     initialDelay: 1
   replicas:
     min: 1
